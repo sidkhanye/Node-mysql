@@ -5,7 +5,8 @@ const mysql = require('mysql');
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    //only include this line after execution. 
+    
+    //only include this line after first run on server. 
     password: 'password'
   
 });
@@ -90,7 +91,6 @@ app.get('/updateproducts/:productId', (req, res) => {
         res.send('product updated');
     });
 });
-
 
 //delete product
 app.get('/deleteproducts/:productId', (req, res) => {     
